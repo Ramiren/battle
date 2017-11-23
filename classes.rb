@@ -1,6 +1,5 @@
 #file: classes
 
-
 class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(Werte),   battle (####)
   @@studenten_hash = Hash.new
   

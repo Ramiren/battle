@@ -1,16 +1,19 @@
-
-load 'classes'
 #file: battle
-
-
 
 #Ermittlung Kampf
 def battle(k1, k2, waffe1, waffe2)
-  sleep(30000)
-  puts
-  puts
+ sleep(1)
+puts "----/---/----"
+sleep(1)
+puts "----/--/-----"
+sleep(1)
+puts "----/-/------"
+sleep(1)
+puts "----//-------"
 
-  5.times {puts }
+puts 
+  puts
+  puts
   puts "#{$student1} (#{waffe1.name}) gegen #{$student2} (#{waffe2.name})"
   puts "_______________________________________________"
   puts 

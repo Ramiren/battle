@@ -1,16 +1,15 @@
 #file: inputs
 
-#Eingaben
-
 #bestimmt ersten Studenten | gibt objekt weiter
 def kämpfer1_auswahl
-print "Erster Student:"
+print "Erster Student: "
   input1 = gets.chomp
+puts
 
 until Studenten.hash.has_key?(input1)
   puts 
   puts "Diesen Studenten gibt es nicht"
-  print "Erster Student:"
+  print "Erster Student: "
   input1 = gets.chomp
 end
    print " -> "
@@ -26,11 +25,12 @@ def kämpfer2_auswahl
   puts
   print "Zweiter Student:"
   input2 = gets.chomp
+puts
 
   until Studenten.hash.has_key?(input2)
     puts
     puts "Diesen Studenten gibt es nicht"
-    print "Zweiter Student:"
+    print "Zweiter Student: "
     input2 = gets.chomp
   end
    
@@ -54,6 +54,7 @@ def waffenwahl1
   puts
   print "#{$student1}, wähle deine Waffe: "
   waffe_input = gets.chomp
+puts
   
   until Waffen.hash.has_key?(waffe_input)
     Waffen.alle
@@ -73,6 +74,7 @@ def waffenwahl2
   puts
   print "#{$student2}, wähle deine Waffe: "
   waffe_input = gets.chomp
+puts
   
   until Waffen.hash.has_key?(waffe_input)
     Waffen.alle

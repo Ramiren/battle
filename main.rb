@@ -1,8 +1,9 @@
 #file: main
 
-require_relative 'inputs'  
-require_relative 'classes'
-require_relative 'battle'
+require_relative  'inputs'
+require_relative  'battle'  
+require_relative  'classes'
+
 
 
 #Ausführung 
