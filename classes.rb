@@ -110,20 +110,7 @@ rage = Waffen.new("7", "Unbendiger Zorn", ["steht auf, haut auf den Tisch und bÃ
 
 
 
-  
+schnee = Wetter.new("es schneit", "1")
 
- def auswirkung
-
-   if zustand == "heiter"
-     
-    puts 
-    puts "alle super laune"
-    
-   else
-     puts "nein"
-   end
- 
-
-end
 
 
