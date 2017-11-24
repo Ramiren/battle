@@ -59,20 +59,9 @@ class Waffen
   
 end
 
-class Wetter
-  def initialize(name, effect)
-    @name = name
-    @effect = effect
-  end
-  
-  def Wetter.zustand
- 
+def wetter_zustand
+wetter = {"sonnig": "freunde"}
 
-    wetter = wetter_auswahl[rand(4)]
-
- end
-  
-  
 end
 
 #Studenten id, name, sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
