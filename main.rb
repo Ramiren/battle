@@ -1,9 +1,8 @@
 #file: main
 
-require_relative  'inputs'
-require_relative  'battle'  
-require_relative  'classes'
-
+require_relative 'inputs'  
+require_relative 'classes'
+require_relative 'battle'
 
 
 #Ausführung 
@@ -14,6 +13,7 @@ puts
  
 #zeigt alle Studenten (Kämpfer) an
   Studenten.alle
+  puts
  
 #ruft Funktion battle auf mit Parameter = Objekten aus Inputs  
 battle(kämpfer1_auswahl, kämpfer2_auswahl, waffenwahl1, waffenwahl2)
@@ -28,15 +28,19 @@ def wiederholen
   print "Weiter? 1 = Ja, 2 = Nein : "
   eingabe = gets.chomp
   
-  #50.times {puts}
+  50.times {puts}
   
-  if eingabe == "1"
-  start
+  if eingabe == "2"
+ exit
   
   else
-    exit
+     start
   end
 end
+
+start
+
+
 
 start
 
