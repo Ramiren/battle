@@ -8,7 +8,14 @@ def battle(k1, k2, waffe1, waffe2)
 puts
 Studenten.auswirkung(Wetter.wieistwetter)
 puts Wetter.wieistwetter.status
-puts
+  puts k1.sarcasm 
+  puts       k1.lazyness 
+  puts      k1.alcoholism 
+   puts     k1.geekyness
+     puts   k1.sexyness 
+ puts      k1.money 
+  puts      k1.rage 
+
 
 sleep(2)
 puts "----/---/----"
@@ -18,7 +25,6 @@ sleep(1)
 puts "----/-/------"
 sleep(1)
 puts "----//-------"
-
 puts 
   
   puts
@@ -48,29 +54,3 @@ puts
     when "6" then kwert2 = k2.money - k1.money
     when "7" then kwert2 = k2.rage - k1.rage
     ####
-  end
-  
-  if kwert1 > kwert2
-    puts"#{k1.name} gewinnt mit der Waffe  \"#{waffe1.name}!\" "
-    puts 
-    puts
-    puts "#{k1.name} #{waffe1.effect1} "
-    puts
-    puts "#{k2.name} #{waffe2.effect2}"
-    wiederholen
-    
-  elsif kwert1 < kwert2
-    puts"#{k2.name} gewinnt mit der Waffe \"#{waffe2.name}!\" "
-    puts
-    puts
-    puts "#{k2.name} #{waffe2.effect1} "
-    puts
-    puts "#{k1.name} #{waffe1.effect2} "
-    wiederholen
-    
-  else 
-    puts "Der Kampf ist unentschieden!"
-    wiederholen
-  end
-end
-  
