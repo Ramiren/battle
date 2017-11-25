@@ -5,7 +5,7 @@ require_relative  'classes'
 #Ermittlung Kampf, Werte ändern sich je nach "Wetter"
 def battle(k1, k2, waffe1, waffe2)
 
-
+puts
 Studenten.auswirkung(Wetter.wieistwetter)
 puts Wetter.wieistwetter.status
 puts
@@ -22,7 +22,7 @@ puts "----//-------"
 puts 
   
   puts
-  puts "#{$student1} (#{waffe1.name}) gegen #{$student2} (#{waffe2.name})"
+  puts "#{k1.name} (#{waffe1.name}) gegen #{k2.name} (#{waffe2.name})"
   puts "_______________________________________________"
   puts 
   
@@ -51,21 +51,21 @@ puts
   end
   
   if kwert1 > kwert2
-    puts"#{$student1} gewinnt mit der Waffe  \"#{waffe1.name}!\" "
+    puts"#{k1.name} gewinnt mit der Waffe  \"#{waffe1.name}!\" "
     puts 
     puts
-    puts "#{$student1} #{waffe1.effect1} "
+    puts "#{k1.name} #{waffe1.effect1} "
     puts
-    puts "#{$student2} #{waffe2.effect2}"
+    puts "#{k2.name} #{waffe2.effect2}"
     wiederholen
     
   elsif kwert1 < kwert2
-    puts"#{$student2} gewinnt mit der Waffe \"#{waffe2.name}!\" "
+    puts"#{k2.name} gewinnt mit der Waffe \"#{waffe2.name}!\" "
     puts
     puts
-    puts "#{$student2} #{waffe2.effect1} "
+    puts "#{k2.name} #{waffe2.effect1} "
     puts
-    puts "#{$student1} #{waffe1.effect2} "
+    puts "#{k1.name} #{waffe1.effect2} "
     wiederholen
     
   else 
