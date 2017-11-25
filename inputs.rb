@@ -1,20 +1,21 @@
 #file: inputs
 
+#Eingaben
+
 #bestimmt ersten Studenten | gibt objekt weiter
 def kämpfer1_auswahl
-print "Erster Student: "
+print "Erster Student:"
   input1 = gets.chomp
-puts
 
 until Studenten.hash.has_key?(input1)
   puts 
   puts "Diesen Studenten gibt es nicht"
-  print "Erster Student: "
+  print "Erster Student:"
   input1 = gets.chomp
 end
    print " -> "
    print  Studenten.hash[input1].name
-   $student1 = Studenten.hash[input1].name 
+   $student1_global = Studenten.hash[input1].name 
    Studenten.hash[input1]
    
 end
@@ -25,19 +26,18 @@ def kämpfer2_auswahl
   puts
   print "Zweiter Student:"
   input2 = gets.chomp
-puts
 
   until Studenten.hash.has_key?(input2)
     puts
     puts "Diesen Studenten gibt es nicht"
-    print "Zweiter Student: "
+    print "Zweiter Student:"
     input2 = gets.chomp
   end
    
   print " -> "
   puts Studenten.hash[input2].name
-  $student2 = Studenten.hash[input2].name
-  if $student1 == $student2 
+  $student2_global = Studenten.hash[input2].name
+  if $student1_global == $student2_global 
     puts
     puts "Du hast dich selber gefickt "
     wiederholen
@@ -48,18 +48,16 @@ end
 
 #bestimmt Waffe von Student 1
 def waffenwahl1
-  puts
   
   Waffen.alle
   puts
-  print "#{$student1}, wähle deine Waffe: "
+  print "#{$student1_global}, wähle deine Waffe: "
   waffe_input = gets.chomp
-puts
   
   until Waffen.hash.has_key?(waffe_input)
     Waffen.alle
     puts
-    print "Diese Waffe gibt es nicht! #{$student1}, wähle: "
+    print "Diese Waffe gibt es nicht! #{$student1_global}, wähle: "
     puts
     waffe_input = gets.chomp
   end
@@ -72,14 +70,13 @@ def waffenwahl2
   puts
   Waffen.alle
   puts
-  print "#{$student2}, wähle deine Waffe: "
+  print "#{$student2_global}, wähle deine Waffe: "
   waffe_input = gets.chomp
-puts
   
   until Waffen.hash.has_key?(waffe_input)
     Waffen.alle
     puts
-    print "Diese Waffe gibt es nicht! #{$student2}, wähle: "
+    print "Diese Waffe gibt es nicht! #{$student2_global}, wähle: "
     puts
     waffe_input = gets.chomp
   end
