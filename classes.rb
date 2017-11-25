@@ -31,26 +31,93 @@ def self.auswirkung(wetter)
   case wetter.name 
 #sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
     when "Warm" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 20 end
+      @@studenten_hash.each do |key, student| 
+        student.sarcasm -= 20
+        student.lazyness += 10
+        student.alcoholism -= 5
+        student.sexyness += 10 
+        student.geekyness += 1 
+        student.money -= 20
+        student.rage -= 30
+        
+      end
     
     when "Regen" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
+      @@studenten_hash.each do |key, student| 
+        student.sarcasm += 20
+        student.lazyness += 10
+        student.alcoholism += 15
+        student.sexyness -= 10 
+        student.geekyness += 0
+        student.money += 0
+        student.rage += 5
+      end
      
     when "Schnee" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
+      @@studenten_hash.each do |key, student| 
+        student.sarcasm -= 5
+        student.lazyness += 16
+        student.alcoholism += 20
+        student.sexyness -= 15
+        student.geekyness += 20
+        student.money -= 0
+        student.rage += 0
+        end
 
     when "Nebel" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
+      @@studenten_hash.each do |key, student| 
+         student.sarcasm -= 20
+        student.lazyness += 10
+        student.alcoholism += 6
+        student.sexyness -= 10 
+        student.geekyness += 1 
+        student.money += 20
+        student.rage -= 1
+        end
   
     when "Sturm" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
+      @@studenten_hash.each do |key, student| 
+         student.sarcasm -= 20
+        student.lazyness += 10
+        student.alcoholism -= 10
+        student.sexyness += 10 
+        student.geekyness -= 25
+        student.money += 20
+        student.rage += 15
+        end
 
     when "Gewitter" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
+      @@studenten_hash.each do |key, student| 
+        student.sarcasm += 20
+        student.lazyness += 10
+        student.alcoholism += 0
+        student.sexyness -= 10 
+        student.geekyness += 0
+        student.money -= 20
+        student.rage += 0
+        end
 
     when "Heiss" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
-
+      @@studenten_hash.each do |key, student| 
+        student.sarcasm -= 30
+        student.lazyness += 10
+        student.alcoholism -= 5
+        student.sexyness += 20
+        student.geekyness += 1 
+        student.money -= 30
+        student.rage += 20
+        end
+      
+    when "Lobo"
+      @@studenten_hash.each do |key, student| 
+        student.sarcasm -= 20
+        student.lazyness += 130
+        student.alcoholism += 50
+        student.sexyness -= rand(100)
+        student.geekyness += 15
+        student.money -= rand(20)
+        student.rage  += 100
+      end
     end
   end
 end
@@ -135,7 +202,7 @@ class Wetter
 def self.wieistwetter
   #wetter ändert sich jede Stunde
   xzahl = Time.new.hour % @@wetter_varianten.count
-  @@wetter_varianten[rand(xzahl)]
+  @@wetter_varianten[xzahl]
 end
 
 end
@@ -143,7 +210,8 @@ end
 wetter1 = Wetter.new("Warm","Es ist heute sonnig und warm.")
 wetter2 = Wetter.new("Regen", "Heute regnet es.")
 wetter3 = Wetter.new("Schnee","Es scheit und schneit.")
-wetter4 = Wetter.new("Nebel", "Grau und Nebel.")
+wetter4 = Wetter.new("Nebel", "Es ist heute grau mit dickem Nebel.")
 wetter5 = Wetter.new("Sturm", "Der Wind pfeift durch die Gassen")
-wetter6 = Wetter.new("Gewitter", "Es blitzt und donnert.")
-wetter7 = Wetter.new("Heiss", "Es ist heiss wie Sau.")
+wetter6 = Wetter.new("Gewitter", "Es ist gewittrig, es blitzt und donnert.")
+wetter7 = Wetter.new("Heiss", "Es ist heute heiss wie Sau.")
+wetter8 = Wetter.new("Lobo", "Heute geht aber garnichts -> LOBO")
