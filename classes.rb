@@ -29,9 +29,9 @@ def self.auswirkung(wetter)
 #Warm, Regen, Schnee, Nebel, Stum, Gewitter, Heiss 
 
   case wetter.name 
-
+#sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
     when "Warm" 
-      @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
+      @@studenten_hash.each do |key, student| student.sarcasm -= 20 end
     
     when "Regen" 
       @@studenten_hash.each do |key, student| student.sarcasm -= 10 end
@@ -75,7 +75,6 @@ class Waffen
   def self.hash
     @@waffen_hash
   end
-  
 
   def effect1
     @effect1[rand(@effect1.length)]
@@ -85,8 +84,6 @@ class Waffen
     @effect2[rand(@effect2.length)]
   end
   
-
-
 end
 
 #Studenten id, name, sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
@@ -136,20 +133,17 @@ class Wetter
   attr_reader :name, :status
 
 def self.wieistwetter
-  xzahl = Time.new.sec % @@wetter_varianten.count
+  #wetter ändert sich jede Stunde
+  xzahl = Time.new.hour % @@wetter_varianten.count
   @@wetter_varianten[rand(xzahl)]
 end
 
 end
 
-wetter1 = Wetter.new("Warm","Es ist sonnig und warm.")
-wetter2 = Wetter.new("Regen", "Es regnet.")
-wetter3 = Wetter.new("Schnee","Es scheit.")
-wetter4 = Wetter.new("Nebel", "Es hat Nebel.")
-wetter5 = Wetter.new("Sturm", "Es stürmt.")
+wetter1 = Wetter.new("Warm","Es ist heute sonnig und warm.")
+wetter2 = Wetter.new("Regen", "Heute regnet es.")
+wetter3 = Wetter.new("Schnee","Es scheit und schneit.")
+wetter4 = Wetter.new("Nebel", "Grau und Nebel.")
+wetter5 = Wetter.new("Sturm", "Der Wind pfeift durch die Gassen")
 wetter6 = Wetter.new("Gewitter", "Es blitzt und donnert.")
 wetter7 = Wetter.new("Heiss", "Es ist heiss wie Sau.")
-
-
-
-
