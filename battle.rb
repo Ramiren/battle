@@ -1,8 +1,16 @@
 #file: battle
+require_relative  'classes'
 
-#Ermittlung Kampf
+
+#Ermittlung Kampf, Werte ändern sich je nach "Wetter"
 def battle(k1, k2, waffe1, waffe2)
- sleep(1)
+
+
+Studenten.auswirkung(Wetter.wieistwetter)
+puts Wetter.wieistwetter.status
+puts
+
+sleep(2)
 puts "----/---/----"
 sleep(1)
 puts "----/--/-----"
@@ -12,7 +20,7 @@ sleep(1)
 puts "----//-------"
 
 puts 
-  puts
+  
   puts
   puts "#{$student1} (#{waffe1.name}) gegen #{$student2} (#{waffe2.name})"
   puts "_______________________________________________"
