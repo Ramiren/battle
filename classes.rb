@@ -34,7 +34,7 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
     when "Warm" 
       Studenten.hash.each do |key, student| 
         student.sarcasm -= 20
-        student.lazyness += 10
+        student.lazyness += 50
         student.alcoholism -= 5
         student.sexyness += 10 
         student.geekyness += 1 
@@ -45,7 +45,7 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
     
     when "Regen" 
       Studenten.hash.each do |key, student| 
-        student.sarcasm += 20
+        student.sarcasm += 50
         student.lazyness += 10
         student.alcoholism += 15
         student.sexyness -= 10 
@@ -58,7 +58,7 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
        Studenten.hash.each do |key, student| 
         student.sarcasm -= 5
         student.lazyness += 16
-        student.alcoholism += 30
+        student.alcoholism += 50
         student.sexyness -= 15
         student.geekyness += 20
         student.money -= 0
@@ -68,23 +68,23 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
     when "Nebel" 
        Studenten.hash.each do |key, student| 
          student.sarcasm -= 20
-        student.lazyness += 10
+        student.lazyness += 50
         student.alcoholism += 6
         student.sexyness -= 10 
         student.geekyness += 1 
         student.money += 20
-        student.rage -= 1
+        student.rage -= 15
         end
   
     when "Sturm" 
        Studenten.hash.each do |key, student| 
-         student.sarcasm -= 20
+        student.sarcasm -= 20
         student.lazyness += 10
         student.alcoholism -= 10
         student.sexyness += 10 
         student.geekyness -= 25
         student.money += 20
-        student.rage += 15
+        student.rage += 50
         end
 
     when "Gewitter" 
@@ -94,7 +94,7 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
         student.alcoholism += 0
         student.sexyness -= 10 
         student.geekyness += 5
-        student.money -= 20
+        student.money -= 200
         student.rage += 0
         end
 
@@ -103,7 +103,7 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
         student.sarcasm -= 30
         student.lazyness += 10
         student.alcoholism -= 5
-        student.sexyness += 20
+        student.sexyness += 50
         student.geekyness += 1 
         student.money -= 30
         student.rage += 20
@@ -111,13 +111,13 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
       
     when "Lobo"
        Studenten.hash.each do |key, student| 
-        student.sarcasm -= 20
-        student.lazyness += 130
-        student.alcoholism += 50
+        student.sarcasm -= rand(100)
+        student.lazyness += (130)
+        student.alcoholism += rand(50)
         student.sexyness -= rand(100)
-        student.geekyness += 15
-        student.money -= rand(20)
-        student.rage  += 100
+        student.geekyness += rand(200)
+        student.money -= rand(200)
+        student.rage  += rand(100)
       end
     end
   end
@@ -155,8 +155,8 @@ class Waffen
 end
 
 #Studenten id, name, sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
-student1 = Studenten.new("1", "Roman", 99, 56, 35, 23, 35,23,78) ####
-student2 = Studenten.new("2", "Elena", 12, 34, 3, 84, 35, 34, 27)   
+student1 = Studenten.new("1", "Roman", 99, 56, 65, 23, 34,23,78) ####
+student2 = Studenten.new("2", "Elena", 12, 9, 34, 84, 65, 34, 27)   
 student3 = Studenten.new("3", "Tobias", 77, 39, 85, 24, 67, 14, 56)  
 student4 = Studenten.new("4","Thomas", 68, 55, 76, 65, 70, 36, 32)
 student5 = Studenten.new("5", "Franziska", 79, 60, 14, 1, 90, 57, 68)
