@@ -10,7 +10,8 @@ puts 'Das Wetter hat einen Einfluss auf den Kampf'
 Studenten.auswirkung(Wetter.wieistwetter)
 puts Wetter.wieistwetter.status
 
-
+puts
+puts
 sleep(1)
 puts "----/---/----"
 sleep(1)
@@ -50,12 +51,6 @@ puts
     when "7" then kwert2 = k2.rage
     ####
   end
-
-
-puts "kwert1und2"
-  puts kwert1,  kwert2
-puts
-
 
   if kwert1 > kwert2
     puts"#{k1.name} gewinnt mit der Waffe  \"#{waffe1.name}!\" "
