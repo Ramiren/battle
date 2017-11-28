@@ -25,12 +25,10 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
     @@studenten_hash
   end
 
-def self.auswirkung(wetter) 
-#Warm, Regen, Schnee, Nebel, Stum, Gewitter, Heiss 
 
  def self.auswirkung(wetter) 
   #Warm, Regen, Schnee, Nebel, Stum, Gewitter, Heiss 
-
+    
     case wetter.name
     #sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
     when "Warm" 
@@ -60,7 +58,7 @@ def self.auswirkung(wetter)
        Studenten.hash.each do |key, student| 
         student.sarcasm -= 5
         student.lazyness += 16
-        student.alcoholism += 20
+        student.alcoholism += 30
         student.sexyness -= 15
         student.geekyness += 20
         student.money -= 0
@@ -95,7 +93,7 @@ def self.auswirkung(wetter)
         student.lazyness += 10
         student.alcoholism += 0
         student.sexyness -= 10 
-        student.geekyness += 0
+        student.geekyness += 5
         student.money -= 20
         student.rage += 0
         end
@@ -157,8 +155,8 @@ class Waffen
 end
 
 #Studenten id, name, sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
-student1 = Studenten.new("1", "Roman", 99, 56,35, 23, 35,23,78) ####
-student2 = Studenten.new("2", "Elena", 12, 34, 3, 84, 36, 34, 27)   
+student1 = Studenten.new("1", "Roman", 99, 56, 35, 23, 35,23,78) ####
+student2 = Studenten.new("2", "Elena", 12, 34, 3, 84, 35, 34, 27)   
 student3 = Studenten.new("3", "Tobias", 77, 39, 85, 24, 67, 14, 56)  
 student4 = Studenten.new("4","Thomas", 68, 55, 76, 65, 70, 36, 32)
 student5 = Studenten.new("5", "Franziska", 79, 60, 14, 1, 90, 57, 68)
@@ -202,11 +200,11 @@ class Wetter
 
   attr_reader :name, :status
 
-def self.wieistwetter
-  #wetter ändert sich jede Stunde
-  xzahl = Time.new.hour % @@wetter_varianten.count
-  @@wetter_varianten[xzahl]
-end
+  def self.wieistwetter
+    #wetter ändert sich jede Stunde
+    xzahl = Time.new.sec % @@wetter_varianten.count
+    @@wetter_varianten[xzahl]
+  end
 
 end
 
