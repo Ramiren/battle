@@ -28,10 +28,13 @@ class Studenten  #bei erweitureng ändern: ini(x,d), @=x, attractor, Studenten(W
 def self.auswirkung(wetter) 
 #Warm, Regen, Schnee, Nebel, Stum, Gewitter, Heiss 
 
-  case wetter.name 
-#sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
+ def self.auswirkung(wetter) 
+  #Warm, Regen, Schnee, Nebel, Stum, Gewitter, Heiss 
+
+    case wetter.name
+    #sarcasm, lazyness, alcoholism, sexyness, geekyness, money, rage
     when "Warm" 
-      @@studenten_hash.each do |key, student| 
+      Studenten.hash.each do |key, student| 
         student.sarcasm -= 20
         student.lazyness += 10
         student.alcoholism -= 5
@@ -39,11 +42,11 @@ def self.auswirkung(wetter)
         student.geekyness += 1 
         student.money -= 20
         student.rage -= 30
-        
-      end
+        end
+    
     
     when "Regen" 
-      @@studenten_hash.each do |key, student| 
+      Studenten.hash.each do |key, student| 
         student.sarcasm += 20
         student.lazyness += 10
         student.alcoholism += 15
@@ -54,7 +57,7 @@ def self.auswirkung(wetter)
       end
      
     when "Schnee" 
-      @@studenten_hash.each do |key, student| 
+       Studenten.hash.each do |key, student| 
         student.sarcasm -= 5
         student.lazyness += 16
         student.alcoholism += 20
@@ -65,7 +68,7 @@ def self.auswirkung(wetter)
         end
 
     when "Nebel" 
-      @@studenten_hash.each do |key, student| 
+       Studenten.hash.each do |key, student| 
          student.sarcasm -= 20
         student.lazyness += 10
         student.alcoholism += 6
@@ -76,7 +79,7 @@ def self.auswirkung(wetter)
         end
   
     when "Sturm" 
-      @@studenten_hash.each do |key, student| 
+       Studenten.hash.each do |key, student| 
          student.sarcasm -= 20
         student.lazyness += 10
         student.alcoholism -= 10
@@ -87,7 +90,7 @@ def self.auswirkung(wetter)
         end
 
     when "Gewitter" 
-      @@studenten_hash.each do |key, student| 
+       Studenten.hash.each do |key, student| 
         student.sarcasm += 20
         student.lazyness += 10
         student.alcoholism += 0
@@ -109,7 +112,7 @@ def self.auswirkung(wetter)
         end
       
     when "Lobo"
-      @@studenten_hash.each do |key, student| 
+       Studenten.hash.each do |key, student| 
         student.sarcasm -= 20
         student.lazyness += 130
         student.alcoholism += 50
