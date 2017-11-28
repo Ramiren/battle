@@ -210,7 +210,7 @@ end
 
 wetter1 = Wetter.new("Warm","Es ist heute sonnig und warm.")
 wetter2 = Wetter.new("Regen", "Heute regnet es.")
-wetter3 = Wetter.new("Schnee","Es scheit und schneit.")
+wetter3 = Wetter.new("Schnee","Es schneit und schneit.")
 wetter4 = Wetter.new("Nebel", "Es ist heute grau mit dickem Nebel.")
 wetter5 = Wetter.new("Sturm", "Der Wind pfeift durch die Gassen")
 wetter6 = Wetter.new("Gewitter", "Es ist gewittrig, es blitzt und donnert.")
