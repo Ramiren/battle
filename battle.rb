@@ -6,11 +6,6 @@ require_relative  'classes'
 def battle(k1, k2, waffe1, waffe2)
 
 puts
-puts 'Das Wetter hat einen Einfluss auf den Kampf'
-Studenten.auswirkung(Wetter.wieistwetter)
-puts Wetter.wieistwetter.status
-
-puts
 puts
 sleep(1)
 puts "----/---/----"
@@ -21,12 +16,12 @@ puts "----/-/------"
 sleep(1)
 puts "----//-------"
 puts 
-  
+puts
   puts
   puts "#{k1.name} (#{waffe1.name}) gegen #{k2.name} (#{waffe2.name})"
   puts "_______________________________________________"
-  
-
+  puts
+puts
   
   case waffe1.id
   
@@ -51,6 +46,7 @@ puts
     when "7" then kwert2 = k2.rage
     ####
   end
+#puts kwert1,kwert2
 
   if kwert1 > kwert2
     puts"#{k1.name} gewinnt mit der Waffe  \"#{waffe1.name}!\" "
@@ -75,4 +71,3 @@ puts
     wiederholen
   end
 end
-  
