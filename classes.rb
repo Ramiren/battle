@@ -202,7 +202,7 @@ class Wetter
 
   def self.wieistwetter
     #wetter ändert sich jede Stunde
-    xzahl = Time.new.sec % @@wetter_varianten.count
+    xzahl = Time.new.hour % @@wetter_varianten.count
     @@wetter_varianten[xzahl]
   end
 
